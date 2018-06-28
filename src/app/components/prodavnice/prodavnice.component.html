@@ -1,0 +1,86 @@
+<!--
+<div class="col-lg-12">
+    &lt;!&ndash; Embedded Google Map &ndash;&gt;
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2844.171348881987!2d19.22077685119773!3d44.53212400306642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4759619eb6d7ad29%3A0x544efb9f542eeb0d!2z0JPQuNC80L3QsNC30LjRmNGB0LrQsCwg0JvQvtC30L3QuNGG0LA!5e0!3m2!1ssr!2srs!4v1497592159919"
+            width="100%" height="800px" frameborder="0" style="border:15px" scrolling="no" marginheight="0"
+            marginwidth="0" allowfullscreen></iframe>
+</div>-->
+<!--
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFJiGlnKlqtAlDAGytK-3myJm0VCpOhek&callback=initMap">
+</script>-->
+<!--
+<div>
+<h1>{{ title }}</h1>
+
+&lt;!&ndash; this creates a google map on the page with the given lat/lng from &ndash;&gt;
+&lt;!&ndash; the component as the initial center of the map: &ndash;&gt;
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+</div>-->
+
+
+<script src="../../services/prodavnice.service.ts"></script>
+
+<section>
+    <!-- Project One -->
+    <h1 style="color: #c17f0a;">Location</h1>
+    <div class="col-md-12">
+        <ng-container>
+            <iframe width="100%" height="500px" frameborder="0" style="border:2px" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen src="https://www.google.com/maps/d/embed?mid=18be5yCN21_w99MGWwt-nGq43lgkRwSKZ">
+
+  </iframe>
+        </ng-container>
+
+        <br/>
+    </div>
+    <hr>
+    <!-- <br/> -->
+    <!-- <br/>
+    <br/> -->
+
+    <div class=" col-lg-12 ">
+        <table class="display" cellspacing="10 ">
+            <thead>
+                <tr>
+
+                    <th>Naziv: </th>
+                    <th>Adresa: </th>
+                    <th>Radno vreme: </th>
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let prodavnica of prodavnice ">
+                    <td>{{prodavnica.naziv}}</td>
+                    <td>{{prodavnica.adresa}}</td>
+                    <td>{{prodavnica.radnoVreme}} </td>
+
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+</section>

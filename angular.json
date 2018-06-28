@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "it255-projektniZadatak": {
+    "it255-projekat": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/it255-projektniZadatak",
+            "outputPath": "dist/it255-projekat",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "it255-projektniZadatak:build"
+            "browserTarget": "it255-projekat:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "it255-projektniZadatak:build:production"
+              "browserTarget": "it255-projekat:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "it255-projektniZadatak:build"
+            "browserTarget": "it255-projekat:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "it255-projektniZadatak-e2e": {
+    "it255-projekat-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "it255-projektniZadatak:serve"
+            "devServerTarget": "it255-projekat:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "it255-projektniZadatak:serve:production"
+              "devServerTarget": "it255-projekat:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "it255-projektniZadatak"
+  "defaultProject": "it255-projekat"
 }
